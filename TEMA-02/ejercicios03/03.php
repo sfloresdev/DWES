@@ -7,20 +7,8 @@
             "El confidencial" => "https://www.elconfidencial.com/"
         ];
 
-    print_r($arr); 
+    $key = array_rand($arr);
 
-    function randomNewspaper(&$arr): array {
-        $keys = array_keys($arr);
-        
-        shuffle($keys);
-
-        foreach($keys as $key){
-            $new[$key] = $arr[$key];
-        }
-        return $new;
-    }
-    echo "<br><br><br><br>";
-    print_r(randomNewspaper($arr));
-
-    //$periodico = array_map(fn($key, $value) => "", $arr, array_keys($arr));
+    echo '<ul> <li><a href="' . $arr[$key] . '" target="_blank">';
+    echo " $key </li> </ul>";
 ?>
