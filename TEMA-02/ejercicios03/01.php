@@ -32,5 +32,5 @@
 
     echo print_r($values);
 
-    echo "Moda: " . print_r($arr[1]);
+    echo "<br>Moda: " . print_r($arr[1]);
 ?>

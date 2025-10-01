@@ -12,6 +12,13 @@ foreach($paises as $pais => $info){
         $maxPoblacion = $poblacion;
         $paisMasHabitantes = $pais;
     }
+
+    /*
+    if ($info['Poblacion'] > $maxPoblacion){
+        $maxPoblacion = $pais;
+        $paisMasHabitantes = $pais;
+    }
+    */
 }
 
 echo "El pais con mas habitantes es $paisMasHabitantes con: $maxPoblacion <br><br><br>";
