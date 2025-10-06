@@ -26,9 +26,13 @@ switch ($operador) {
     case '/':
         $result =  dividir($num1, $num2, $base);
         break;
+        
     default:
-        echo "Operacion no definida";
+        $result = "Operacion no definida";
 }
+
+echo "<p>El resultado es $result</p>";
+
 
 function sumar($num1, $num2, $base)
 {
