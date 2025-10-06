@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Mini Calculadora</h1>
+
+    <form action="02.php" method="GET">
+
+        <label for="num1">Num 1º: </label>
+        <input type="number" name="num1"><br><br>
+
+        <label for="num2">Num 2º: </label>
+        <input type="number" name="num2"><br><br>
+
+        <input type="submit" value="+" name="operador">
+        <input type="submit" value="-" name="operador">
+        <input type="submit" value="*" name="operador">
+        <input type="submit" value="%" name="operador"><br><br>
+
+        <input type="radio" value="10" name="format" id="decimal" checked>
+        <label for="decimal">Decimal</label>
+        <input type="radio" value="16" name="format" id="hexadecimal">
+        <label for="decimal">Hexadecimal</label>
+        <input type="radio" value="01" name="format" id="binary">
+        <label for="decimal">Binario</label><br><br>
+    </form>
+
+
+    <p>El resultado es </p>
+    
+</body>
+</html>
