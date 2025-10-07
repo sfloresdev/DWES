@@ -9,22 +9,25 @@ if (isset($_GET['operador']))
 $base = $_GET['format'];
 $result = 0;
 
-
 switch ($operador) {
     case '+':
-        $result = sumar($num1, $num2, $base);
+        $result = $num1 + $num2;
+        $result = base($base, $result);
         break;
 
     case '-':
-        $result = restar($num1, $num2, $base);
+        $result = $num1 - $num2;
+        $result = base($base, $result);
         break;
 
     case '*':
-        $result = multiplicar($num1, $num2, $base);
+        $result = $num1 * $num2;
+        $result = base($base, $result);
         break;
 
     case '/':
-        $result =  dividir($num1, $num2, $base);
+        $result = $num1 / $num2;
+        $result = base($base, $result);
         break;
         
     default:
@@ -33,67 +36,13 @@ switch ($operador) {
 
 echo "<p>El resultado es $result</p>";
 
-
-function sumar($num1, $num2, $base)
+function base($base, $total)
 {
     if ($base == 10)
-        return $num1 + $num2;
-
+        return $total;
     if ($base == 16) {
-        $num1 = hexdec($num1);
-        $num2 = hexdec($num2);
-        return dechex($num1 + $num2);
+        return dechex($total);
     } else {
-        $num1 = bindec($num1);
-        $num2 = bindec($num2);
-        return decbin($num1 + $num2);
-    }
-}
-
-function restar($num1, $num2, $base)
-{
-    if ($base == 10)
-        return $num1 - $num2;
-
-    if ($base == 16) {
-        $num1 = hexdec($num1);
-        $num2 = hexdec($num2);
-        return dechex($num1 - $num2);
-    } else {
-        $num1 = bindec($num1);
-        $num2 = bindec($num2);
-        return decbin($num1 - $num2);
-    }
-}
-
-function multiplicar($num1, $num2, $base)
-{
-    if ($base == 10)
-        return $num1 * $num2;
-
-    if ($base == 16) {
-        $num1 = hexdec($num1);
-        $num2 = hexdec($num2);
-        return dechex($num1 * $num2);
-    } else {
-        $num1 = bindec($num1);
-        $num2 = bindec($num2);
-        return decbin($num1 * $num2);
-    }
-}
-
-function dividir($num1, $num2, $base)
-{
-    if ($base == 10)
-        return $num1 / $num2;
-
-    if ($base == 16) {
-        $num1 = hexdec($num1);
-        $num2 = hexdec($num2);
-        return dechex($num1 / $num2);
-    } else {
-        $num1 = bindec($num1);
-        $num2 = bindec($num2);
-        return decbin($num1 / $num2);
+        return decbin($total);
     }
 }

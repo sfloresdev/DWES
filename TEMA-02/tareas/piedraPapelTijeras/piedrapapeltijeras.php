@@ -8,9 +8,6 @@ const PAPEL = "&#x1F91A;";
 $jugador1 = mt_rand(1, 3);
 $jugador2 = mt_rand(1, 3);
 
-echo "$jugador1";
-echo "  $jugador2<br>";
-
 function piedraPapelTijeras($opcion, $jugador)
 {
     switch($opcion)
@@ -26,7 +23,10 @@ function piedraPapelTijeras($opcion, $jugador)
     }
 }
 
-echo "Jugador 1: " . piedraPapelTijeras($jugador1, 1);
-
-echo "Jugador 2: " . piedraPapelTijeras($jugador2, 2);
+echo "<table>";
+    echo "<tr>";
+        echo "Jugador 1: " . piedraPapelTijeras($jugador1, 1);
+        echo "Jugador 2: " . piedraPapelTijeras($jugador2, 2);
+    echo "<tr>";
+echo "</table>";
 ?>
