@@ -1,0 +1,78 @@
+/* ===== Estilos generales ===== */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #1e1e1e; /* Fondo oscuro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: #f1f1f1;
+}
+
+/* ===== Formulario ===== */
+form {
+    background: #2a2a2a;
+    padding: 18px 22px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.7);
+    width: 100%;
+    max-width: 400px;
+}
+
+/* ===== Etiquetas ===== */
+label {
+    display: block;
+    margin-bottom: 3px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #e0e0e0;
+}
+
+/* ===== Campos de entrada ===== */
+input, select {
+    width: 100%;
+    padding: 7px 9px;
+    margin-bottom: 12px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    font-size: 14px;
+    background: #1c1c1c;
+    color: #f1f1f1;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+/* Hover y foco */
+input:focus, select:focus {
+    border-color: #4a90e2;
+    outline: none;
+    box-shadow: 0 0 4px rgba(74,144,226,0.5);
+}
+
+/* Ajuste especial para inputs pequeños */
+input[type="color"],
+input[type="range"],
+input[type="time"] {
+    width: auto;
+    padding: 4px;
+    margin-right: 6px;
+}
+
+/* ===== Botón ===== */
+input[type="button"] {
+    background: #4a90e2;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 6px;
+    padding: 9px;
+    transition: background 0.3s ease;
+    width: 100%;
+}
+
+input[type="button"]:hover {
+    background: #357abd;
+}
