@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario PHP04</title>
+</head>
+
+<body>
+
+    <form action="04.php" method="post">
+        <label for="nombre">nombre</label>
+        <input type="text" name="username">
+        <br><br>
+        <label for="contraseña">Contraseña</label>
+        <input type="password" name="password"><br>
+
+        <hr>
+        RADIO:
+        <input type="radio" name="color" id="color">
+        <label for="Rojo">Rojo</label>
+        <input type="radio" name="color" id="color">
+        <label for="Naranja">Naranja</label>
+        <input type="radio" name="color" id="color">
+        <label for="Verde">Verde</label>
+
+        <hr>
+
+        CHECKBOX:
+        <label for="publicidad">Quiero recibir publicidad</label>
+        <input type="checkbox" name="publicidad" value="NO"><br>
+        CHECKBOX:
+        <label for="ingles">Ingles</label>
+        <input type="checkbox" name="idioma[]" value="Ingles">
+        <label for="frances">Frances</label>
+        <input type="checkbox" name="idioma[]" value="Frances">
+        <label for="aleman">Aleman</label>
+        <input type="checkbox" name="idioma[]" value="Aleman"><br>
+
+        <hr>
+
+        SELECT:
+        <br><strong>Simple</strong><br>
+        <label for="estudios">Año de finalizacion de los estudios</label>
+        <select name="year" id="year">
+            <option value="2000">2000</option>
+            <option value="2001">2001</option>
+            <option value="2002">2002</option>
+            <option value="2003">2003</option>
+            <option value="2004">2004</option>
+            <option value="2005">2005</option>
+            <option value="2006">2006</option>
+            <option value="2007">2007</option>
+            <option value="2008">2008</option>
+            <option value="2009">2009</option>
+            <option value="2010">2010</option>
+            <option value="2011">2011</option>
+            <option value="2012">2012</option>
+            <option value="2013">2013</option>
+            <option value="2014">2014</option>
+            <option value="2015">2015</option>
+            <option value="2016">2016</option>
+            <option value="2017">2017</option>
+            <option value="2018">2018</option>
+            <option value="2019">2019</option>
+            <option value="2020">2020</option>
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+            <option value="2024">2024</option>
+            <option value="2025">2025</option>
+        </select><br>
+
+        <strong>Multiple</strong>
+        <select name="ciudad[]" id="ciudad" multiple>
+            <option value="Asturias">Asturias</option>
+            <option value="Barcelona">Barcelona</option>
+            <option value="Madrid">Madrid</option>
+            <option value="Sevilla">Sevilla</option>
+            <option value="Valencia">Valencia</option>
+            <option value="Bilbao">Bilbao</option>
+        </select><br>
+
+        <hr>
+
+        <strong>TEXTAREA:</strong>
+        <label for="comentario">Escriba sus comentarios: </label><br>
+        <textarea id="comentario" name="comentario" rows="5" cols="40" placeholder="Escribe aquí tu comentario..."></textarea>
+        <br>
+        <hr>
+
+        <input type="submit" name="resetear" id="resetear" value="Resetar el formulario">
+        <input type="submit" name="enviar" id="enviar" value="Enviar formulario al servidor">
+    </form>
+</body>
+
+</html>
