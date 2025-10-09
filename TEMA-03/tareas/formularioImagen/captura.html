@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Jugador</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    form {
+        background: white;
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        max-width: 500px;
+        width: 100%;
+    }
+
+    label {
+        color: #333;
+        font-weight: 600;
+        font-size: 15px;
+    }
+
+    input[type="text"],
+    input[type="number"] {
+        padding: 10px 12px;
+        border: 2px solid #e0e0e0;
+        border-radius: 8px;
+        font-size: 15px;
+        transition: all 0.3s ease;
+        margin-left: 5px;
+    }
+
+    input[type="text"]:focus,
+    input[type="number"]:focus {
+        outline: none;
+        border-color: #667eea;
+        box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    }
+
+    input[type="checkbox"],
+    input[type="radio"] {
+        width: 18px;
+        height: 18px;
+        cursor: pointer;
+        accent-color: #667eea;
+        margin-right: 8px;
+    }
+
+    input[type="checkbox"]+label,
+    input[type="radio"]+label {
+        cursor: pointer;
+        margin-right: 20px;
+    }
+
+    input[type="file"] {
+        padding: 10px;
+        border: 2px dashed #667eea;
+        border-radius: 8px;
+        cursor: pointer;
+        background: #f8f9fa;
+        font-size: 14px;
+    }
+
+    input[type="submit"],
+    input[type="reset"] {
+        padding: 12px 30px;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin-right: 10px;
+    }
+
+    input[type="submit"] {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+    }
+
+    input[type="submit"]:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+    }
+
+    input[type="reset"] {
+        background: #e0e0e0;
+        color: #333;
+    }
+
+    input[type="reset"]:hover {
+        background: #d0d0d0;
+        transform: translateY(-2px);
+    }
+
+    br {
+        line-height: 1.8;
+    }
+</style>
+
+<body>
+
+    <form action="index.php" method="post" enctype="multipart/form-data">
+
+        <label for="nombre">Nombre: </label>
+        <input type="text" name="nombre" id="nombre"><br><br>
+
+        <label for="alias">Alias: </label>
+        <input type="text" name="alias" id="alias"><br><br>
+
+        <label for="edad">Edad: </label>
+        <input type="number" name="edad" id="edad"><br><br>
+
+        Armas a elergir (puedes elegir varias):
+        <br><br>
+        <input type="checkbox" name="arma[]" value="maza">
+        <label for="maza">Maza</label><br>
+
+        <input type="checkbox" name="arma[]" value="antorcha">
+        <label for="antorcha">Antorcha</label><br>
+
+        <input type="checkbox" name="arma[]" value="martillo">
+        <label for="martillo">Martillo</label><br>
+
+        <input type="checkbox" name="arma[]" value="latigo">
+        <label for="latigo">Latigo</label><br><br>
+
+        ¿Practica artes mágicas?<br>
+        <input type="radio" name="magia" id="magia" value="si" checked>
+        <label for="si">Si</label><br>
+
+        <input type="radio" name="magia" id="magia" value="no">
+        <label for="no">No</label><br><br>
+
+        <label for="imagen">Subir imagen</label><br>
+        <input type="file" name="avatar" id="avatar">
+        <br><br>
+        <input type="submit" name="enviar" id="enviar">
+        <input type="reset" name="reset" id="reset">
+
+    </form>
+</body>
+
+</html>
