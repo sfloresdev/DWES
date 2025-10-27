@@ -1,12 +1,19 @@
 <?php
 session_start();
 
+$precioFrutas =[
+	"Manzanas" => 15,
+	"Limones" => 3,
+	"Narajas" => 6,
+	"Platanos" => 10,
+];
+
 // Manejo de la sesión con dos valores
 // 'cliente' => nombre del cliente
 // 'pedidos' => array asociativo fruta => cantidad
 
 // Nuevo cliente: anoto en la sesión su nombre y creo su tabla de pedidos vacía
-if (isset($_GET['cliente'])) {
+if (isset($_GET['cliente']) && !isset($_SESSION['cliente'])){
 	$_SESSION['cliente'] = $_GET['cliente'];
 	$_SESSION['pedidos'] = [];
 }
@@ -35,13 +42,14 @@ if (isset($_POST["accion"])) {
 			break;
 		case " Terminar ":
 			// Destruyo la sesión y vuelvo a la página de bienvenida
+			$compraRealizada = htmlTablaPedidos();
+			$preciosFrutas = htmlTablaPrecios($precioFrutas);
 			require_once 'despedida.php';
 			session_destroy();
 			exit();
 			break;
 	}
 }
-$compraRealizada = htmlTablaPedidos();
 require_once 'compra.php';
 
 
@@ -50,5 +58,22 @@ require_once 'compra.php';
 function htmlTablaPedidos(): string
 {
 	$msg = "";
+	$msg .= "<table>";
+
+	foreach($_SESSION['pedidos'] as $fruta => $cantidad){
+		$msg .= "<tr><td> $fruta : $cantidad </td></tr>";
+	}
+	$msg .= "</table>";
+	return $msg;
+}
+
+function htmlTablaPrecios($precios): string{
+	$msg = "";
+
+	$msg .= "<table>";
+	foreach($precios as $fruta => $precio){
+		$msg .= "<tr><td> $fruta : $precio € </td></tr>";
+	}
+	$msg .= "</table>";
 	return $msg;
 }

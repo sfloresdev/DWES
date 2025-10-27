@@ -12,6 +12,10 @@
         <?= $compraRealizada ?>
     </div>
     
+	<div class="precios-detalle">
+        <?= $preciosFrutas ?>
+    </div>
+
     <div class="mensaje-principal">¡Muchas gracias por su pedido! Vuelva pronto 💚</div>
     
     <input type="button" value=" NUEVO CLIENTE " onclick="location.href='index.php'">
