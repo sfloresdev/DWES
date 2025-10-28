@@ -13,7 +13,7 @@ if (isset($_POST['accion'])){
         case "Jugar":
             // Si no hay dinero en la sesion, lo obtenemos del formulario
             if (!isset($_SESSION['dinero'])){ 
-                if (empty($_SESSION['dinero']) || $_POST['dinero'] <= 0){
+                if (empty($_POST['dinero']) || $_POST['dinero'] <= 0){
                     echo "Para jugar es necesario ingresar dinero";
                     session_destroy();
                     exit();
@@ -36,7 +36,7 @@ if (isset($_POST['accion_jugar'])){
 
     $dinero = $_SESSION['dinero'] ?? 0;
 
-    if ($_POST['accion_jugar'] === "Apostar"){
+    if ($_POST['accion_jugar'] === "Apostar" && $dinero > 0){
         $cantidad = (int) $_POST['apuesta'];
         $tipo = $_POST['tipo'];
 
