@@ -54,23 +54,19 @@ if (isset($_POST['accion_jugar'])){
     exit();
 }
 
-function    realizarTirada(): int{
-    return mt_rand(0, 36); 
-}
-
 function    calcularGanador(int &$dinero, string $apuesta, int $cantidad){
     //No estan vacios o son null
     if (!isset($apuesta) || !isset($cantidad)){
         echo "No se ha puesto una cantidad o no se ha indicado tipo";
         return ;
     }
-    //No nos han cambiado los values de los tipos de apuesta
+    //Nos han cambiado los values de los tipos de apuesta
     if ($apuesta !== "par" && $apuesta !== "impar"){
         echo "Tipo de apuesta no valido";
         return ;
     }
 
-    $numero = realizarTirada();
+    $numero = mt_rand(0, 36);
     $resultado = ($numero % 2 === 0) ? "par" : "impar";
     if ($apuesta === $resultado){
         $dinero += $cantidad;
