@@ -64,7 +64,7 @@ Si eres estudiante:
 - ✅ Úsalo como **referencia** cuando estés atascado
 - ❌ **NO lo copies** directamente sin entender el código
 
-El verdadero aprendizaje viene de enfrentarte a los problemas, equivocarte y encontrar tus propias soluciones. Animo!🤓☺️
+El verdadero aprendizaje viene de enfrentarte a los problemas, equivocarte y encontrar tus propias soluciones. Animo! 🤓☺️
 
 ## 📂 Estructura del Repositorio
 
@@ -85,11 +85,6 @@ DWES/
 │   └── ...
 └── README.md
 ```
-
-## 📧 Contacto
-
-Si tienes preguntas o sugerencias sobre el contenido del repositorio, no dudes en contactarme.
-
 ---
 
-**Recuerda**: El objetivo es aprender, no solo aprobar. ¡Buena suerte con tus estudios! 💪
+**Recuerda**: El objetivo es aprender, no solo aprobar. Buena suerte! 💪
