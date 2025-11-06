@@ -2,7 +2,7 @@
 
 $nombre = $_POST['nombre'] ?? 'Anonimo';
 $apellidos = $_POST['apellidos'] ?? '';
-$sexo = $_POST[]
+//$sexo = $_POST[];
 
 
 $msg[] = "Bienvenido $nombre";
