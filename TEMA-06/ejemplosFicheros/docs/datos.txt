@@ -1,0 +1,8 @@
+Este es un archivo de prueba para verificar las operaciones de lectura y escritura.
+
+Línea 1: El sistema debe poder leer este texto sin errores.
+Línea 2: También debe ser capaz de escribir nuevas líneas al final.
+Línea 3: Los caracteres especiales como ñ, á, é, í, ó, ú y símbolos © ® € deben conservarse correctamente.
+Línea 4: Se espera que las líneas vacías se mantengan:
+
+(fin de prueba)
