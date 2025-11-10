@@ -9,7 +9,7 @@
 <body>
 
     <form  method="post">
-        <h2>Cambiar Contraseña del usuario PEPITO</h2>
+        <h2>Cambiar Contraseña del usuario</h2>
         <h3><?= ($mensaje)??"" ?></h3>
         <div>
             <label for="current-password">Contraseña Actual:</label>

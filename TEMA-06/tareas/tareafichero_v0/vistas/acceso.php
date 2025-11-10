@@ -13,12 +13,12 @@
         <h3><?= ($mensaje)??"" ?></h3>
         <div>
             <label for="username">Usuario:</label>
-            <input type="text" id="username" name="username" required>
+            <input type="text" id="username" name="username" >
         </div>
 
         <div>
             <label for="password">Contraseña:</label>
-            <input type="password" id="password" name="password" required>
+            <input type="password" id="password" name="password" >
         </div>
 
         <div>

@@ -37,9 +37,9 @@
 		$fichero = @fopen(FICH_USUARIOS, 'a'); // Abrimos el archivo con el descriptor "agregar al final";
 		if (!$fichero)
 			die("Error al abir el archivo");
-		$cadena = $_POST['user'] . '|' . $_POST['password'] . "\n"; // Recibimos los datos del formulario y creamos la cadena
+		$cadena = $_POST['user'] . ' | ' . $_POST['password'] . "\n"; // Recibimos los datos del formulario y creamos la cadena
 		$ok = fwrite($fichero, $cadena); //Escribimos los datos en el fichero
-		echo ($ok)? "Datos añadidos al fichero" : "Erro al añadirlos"; // Output del resultado
+		echo ($ok)? "Datos añadidos al fichero" : "Error al añadirlos"; // Output del resultado
 		fclose($fichero);
 		echo "<br>Pulsa <a href='colocarDatos.php'>aqui</a> para continuar.";
 	}

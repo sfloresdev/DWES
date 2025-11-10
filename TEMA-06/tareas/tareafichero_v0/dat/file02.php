@@ -3,7 +3,6 @@
  *  Añade datos recogidos por un formulario en un fichero 
  *  con formato: nombre | contraseña
  */
-
 // El fichero tiene que tener permisos de lectura y escritura 
 define("FICH_DATOS", 'usuarios.txt');
 
@@ -16,7 +15,7 @@ if (!is_readable(FICH_DATOS)) {
 
 
 // Añado datos al fichero 
-if (!empty($_REQUEST['user']) && ! empty($_REQUEST['clave'])) {
+if (!empty($_REQUEST['user']) && !empty($_REQUEST['clave'])) {
     // abrimos el fichero para añadir al final
     // Ciframos la contraseña
     $clavehash = password_hash($_REQUEST['clave'], PASSWORD_DEFAULT);
@@ -24,7 +23,7 @@ if (!empty($_REQUEST['user']) && ! empty($_REQUEST['clave'])) {
     // Si no esta lo añado
     if (!actualizarUsuario($_REQUEST['user'], $clavehash)) {
         $ok = file_put_contents(FICH_DATOS, $cadena, FILE_APPEND);
-        if (! $ok)  echo "ERROR al añadir datos";
+        if (!$ok)  echo "ERROR al añadir datos";
     }
 }
 
@@ -41,9 +40,8 @@ function actualizarUsuario($usuario, $clave): bool
             break; // NO hace falta buscar más
         }
     }
-    if ($actualizado) {
-         volcarDatos($filearray);
-    }
+    if ($actualizado)
+		volcarDatos($filearray);
     return $actualizado;
 }
 
