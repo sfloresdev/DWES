@@ -2,13 +2,14 @@
 
 $tnums = [1=> "uno", "dos", "tres", "cuatro", "cinco", "seis", "siete", "ocho", "nueve", "diez"];
 
-$resultados = [];
+$tablafinal = [];
+
 foreach($tnums as $k => $v){
-	$tablafinal = [];
+	$resultados = [];
 	for ($i = 0; $i <= 10; $i++){
 		$resultados[$i] = $k * $i; 
 	}
-	$resultados[$v] = $resultados;
+	$tablafinal[$v] = $resultados;
 }
 
 echo "<pre><code>";
