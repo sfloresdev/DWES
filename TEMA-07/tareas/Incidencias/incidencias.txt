@@ -6,3 +6,17 @@
 18/11/2025 11:08, Mario, No funciona, 1, ::1
 18/11/2025 11:08, Mario, No funciona, 1, ::1
 18/11/2025 11:10, Sergio, iajeofijaewfaewf, 4, ::1 
+19/11/2025 12:00, , , , ::1 
+19/11/2025 12:00, , , , ::1 
+19/11/2025 12:00, sergio, awfe, 4, ::1 
+19/11/2025 12:00, serg, sergsregergeg, 4, ::1 
+19/11/2025 12:00, serg, sergsregergeg, 4, ::1 
+19/11/2025 12:00, serg, sergsregergeg, 4, ::1 
+19/11/2025 12:21, Sergio, no, 2, ::1 
+19/11/2025 12:22, Luis, Si, 1, ::1 
+19/11/2025 12:22, Negro, negro, 4, ::1 
+19/11/2025 12:25, , , , ::1 
+19/11/2025 12:25, fawef, awefaw, 1, ::1 
+19/11/2025 12:29, Test1aw, aewfawef, 3, ::1 
+19/11/2025 12:29, Test2aw, aewejdgyjfk, 1, ::1 
+19/11/2025 12:30, Test3aw, ñilñoiñoj, 4, ::1 

@@ -1,8 +1,23 @@
-<?php 
+<?php
+$cont_incidencias = 0;
+
+if (isset($_COOKIE['numero_incidencias'])){
+	$cont_incidencias = $_COOKIE['numero_incidencias'];
+}
+
+if ($cont_incidencias >= 3){
+	echo "Error: no puede introducir mas incidencias espere unos minutos";
+	exit();
+}
+else {
+	$cont_incidencias++;
+	setcookie('numero_incidencias', $cont_incidencias, time()+120);
+}
 
 $fecha = date("d/m/Y h:i");
 $nombre = $_POST['nombre'];
-$resumen = $_POST['resumen'];
+// Evito inyeccion html
+$resumen = htmlspecialchars($_POST['resumen']);
 $prioridad = $_POST['prioridad'];
 $ip = $_SERVER['REMOTE_ADDR'];
 
