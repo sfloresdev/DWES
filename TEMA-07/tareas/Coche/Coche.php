@@ -1,5 +1,4 @@
 <?php 
-
 class Coche {
 
     private $modelo;
