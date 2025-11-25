@@ -19,16 +19,16 @@ class Coche {
 
     public function arrancar(){
         if ($this->motor){
-            $this->infoError("El motor ya esta arrancado");
+            $this->infoError("El motor ya esta arrancado<br>");
             return false;
         }
         $this->motor = true;
-        echo "Brmm Brmm, Motor arrancado";
+        echo "Brmm Brmm, Motor arrancado<br>";
     }
 
     public function parar(){
         if (!$this->motor){
-            $this->infoError("El coche ya esta parado");
+            $this->infoError("El coche ya esta parado<br>");
             return false;
         }
         $this->motor = false;
@@ -38,17 +38,17 @@ class Coche {
 
     public function acelera(int $cantidad){
         if ($cantidad < 0){
-            $this->infoError("Si quieres frenar utiliza el metodo correcto");
+            $this->infoError("Si quieres frenar utiliza el metodo correcto<br>");
             return false;
         }
         if (!$this->motor){
-            $this->infoError("El coche esta parado, no puedes acelerar");
+            $this->infoError("El coche esta parado, no puedes acelerar<br>");
             return false;
         }
         $nuevaVelocidad = $this->velocidad + $cantidad;
         
         if ($nuevaVelocidad > $this->velocidad_maxima){
-            $this->infoError("Se esta superando la velocidad maxima"); 
+            $this->infoError("Se esta superando la velocidad maxima<br>"); 
             return false;
         }
 
@@ -57,7 +57,7 @@ class Coche {
 
     public function frena(int $cantidad){
         if ($this->velocidad <= 0 || !$this->motor){
-            $this->infoError("El coche ya va a 0kmh");
+            $this->infoError("El coche ya va a 0kmh<br>");
             return false;
         }
         $this->velocidad -= $cantidad;
@@ -66,7 +66,7 @@ class Coche {
 
     public function recorre(){
         if (!$this->motor){
-            $this->infoError("El coche esta parado, no puedes avanzar");
+            $this->infoError("El coche esta parado, no puedes avanzar<br>");
             return false;
         }
         $this->distancia_parcial += $this->velocidad;
@@ -74,7 +74,7 @@ class Coche {
     }
 
     public function info(): string{
-        return "Modelo: ". $this->modelo. " Velocidad Actual: ". $this->velocidad . " Estado Motor: ". $this->motor . " Kilometros parciales: ". $this->distancia_parcial . " Kilometros totales: ". $this->distancia_total;
+        return "Modelo: ". $this->modelo. " Velocidad Actual: ". $this->velocidad . " Estado Motor: ". $this->motor . " Kilometros parciales: ". $this->distancia_parcial . " Kilometros totales: ". $this->distancia_total. "<br>";
     }
 
     public function getKilometros(): int{
