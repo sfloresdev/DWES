@@ -15,7 +15,7 @@ if (isset($_GET['fichero'])) {
 		$result .= $contLineas . ":" . htmlspecialchars($linea);
 	}
 	$result .= "</pre></code>";
-	$result .= "Numeor de lineas: ". $contLineas. "<br>";
+	$result .= "Numero de lineas: ". $contLineas. "<br>";
 	$result .= "Numero de caracteres: ". filesize($nombreFichero);
 }
 ?>

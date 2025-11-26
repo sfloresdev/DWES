@@ -86,7 +86,7 @@ function generarTablaUsuarios(): String
     <?= generarTablaUsuarios() ?>
     <h2> Introduzca más datos en el fichero:</h2>
     <form action="<?= $_SERVER['PHP_SELF'] ?>" method="POST">
-        Usuario : <input type='text' name='user' s ize='10'> &nbsp;
+        Usuario : <input type='text' name='user' size='10'> &nbsp;
         Contraseña : <input type='password' name='clave' size='10'><br>
         <input type='submit' value='Enviar'>
     </form>

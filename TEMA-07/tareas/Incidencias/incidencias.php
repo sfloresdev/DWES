@@ -22,7 +22,7 @@ $prioridad = $_POST['prioridad'];
 $ip = $_SERVER['REMOTE_ADDR'];
 
 $linea = "$fecha, $nombre, $resumen, $prioridad, $ip \n";
-$resu = @file_put_contents('incidencias.txt', $linea,FILE_APPEND);
+$resu = @file_put_contents('incidencias.txt', $linea, FILE_APPEND);
 if($resu)
 	echo "Muchas gracias $nombre, se ha anotado su incidencia<br>";
 else

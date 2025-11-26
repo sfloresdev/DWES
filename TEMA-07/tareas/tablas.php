@@ -6,7 +6,7 @@ $divisores = [3,5,7];
 // Divisores de 3, 5, 7 
 $tdivisores       = obtenerDivisoresTodos ($datos,$divisores);
 
-// Divisores de 3, 5, 7 sin repetir ( Sin es 3 no esta entre los de 5...
+// Divisores de 3, 5, 7 sin repetir ( Si es 3 no esta entre los de 5...
 $tdivisoresSinRep = obtenerDivisoresNoRepes($datos,$divisores);
 
 
@@ -18,13 +18,19 @@ $tdivisoresSinRep = obtenerDivisoresNoRepes($datos,$divisores);
  * @return array
  */
 
-function obtenerDivisoresTodos ($datos,$divisores):array{
+function obtenerDivisoresTodos($datos,$divisores):array{
   
-    $resu = [];     
-     // COMPLETAR  ++++++++++++++++++++++++++++++
+    $resu = [];
 
+    foreach($divisores as $divisor) {
+        $resu[$divisor] = [];
+        foreach($datos as $n){
+            if ($n % $divisor  == 0){
+                $resu[$divisor][] = $n;
+            }
+        }
+    }
     return $resu;
-
 }
 /**
  * Devuelve un array asociativo con los números que son divisibles de la tabla 
@@ -37,7 +43,17 @@ function obtenerDivisoresTodos ($datos,$divisores):array{
 function obtenerDivisoresNoRepes ($datos,$divisores):array{
  
     $resu = [];
-     // COMPLETAR  +++++++++++++++++++++++++++++++
+    $asignados = [];
+
+    foreach($divisores as $divisor){
+        $resu[$divisor] = [];
+        foreach($datos as $n){
+            if ($n % $divisor == 0 && !in_array($n, $asignados)){
+                $resu[$divisor][] = $n;
+                $asignados[] = $n;
+            }
+        }
+    }
     return $resu;
 }
 
