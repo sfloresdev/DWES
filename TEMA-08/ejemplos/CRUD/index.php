@@ -33,7 +33,6 @@ try {
 		echo "- " . $p->info() . "<br>";
 	}
 
-	/* 
 	// 3. UPDATE: Modificar el producto creado
 	// Primero lo recuperamos por ID para asegurarnos que tenemos el objeto correcto
 	$prodParaEditar = $repo->obtenerPorId($idGenerado);
@@ -55,7 +54,7 @@ try {
 	if ($filas > 0) {
 		echo "<br>🗑️ Producto eliminado correctamente.";
 	}
-	*/
+	
 } catch (PDOException $e) {
 	echo "Error Grave: " . $e->getMessage();
 }

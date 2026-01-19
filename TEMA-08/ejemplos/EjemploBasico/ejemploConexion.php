@@ -84,7 +84,7 @@ while ($obj = $stmt->fetch()) {
 	echo "<td>$obj->nombre</td>";
 	echo "<td>$obj->password</td>";
 	echo "<td>$obj->comentario]</td>";
-	echo "</tr>";
+	echo "</tr>";	
 }
 echo "</table>";
 
