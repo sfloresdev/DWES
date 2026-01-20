@@ -1,21 +1,23 @@
-<?php
+<?php 
 class Pedido {
-    private $numped;
-    private $cod_cliemte;
-    private $producto;
-    private $precio;
-
-    public function __get($atributo) {
-        $class = get_class($this);
-        if (property_exists($class, $atributo))
-            return $this->$atributo;
-    }
-
-    public function __set($atributo, $value) {
-        $class = get_class($this);
-        if (property_exists($class, $atributo))
-            $this->$atributo = $value;
-    }
+   private $numped;
+   private $cod_cliente;
+   private $producto;
+   private $precio;
+   
+   // Métodos mágicos para setter y getter
+   public function __set($nombre,$valor){
+       $class = get_class($this);
+       if ( property_exists($class, $nombre)){
+           $this->$nombre = $valor;
+       }       
+   }
+   
+   public function __get($nombre){
+       $class = get_class($this);
+       if ( property_exists($class, $nombre)){
+           return  $this->$nombre;
+       }
+   }
+   
 }
-
-?>
